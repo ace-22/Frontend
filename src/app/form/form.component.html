@@ -1,0 +1,82 @@
+<div class="container">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+
+  <h1 style="text-align:center;margin-top:10vh;"><u>Get Customers</u></h1>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputcc4">Credit card Required</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="cc"
+          id="inputcc4"
+          placeholder="y/n"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputdc4">Debit card Required</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="dc"
+          id="inputdc4"
+          placeholder="y/n"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputloanr">Loan Required</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="lr"
+        id="inputloanr"
+        placeholder="y/n"
+      />
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" [(ngModel)]="select" class="form-control">
+          <option selected>Choose...</option>
+          <option>Greater than</option>
+          <option>Less than</option>
+          <option>Equals to</option>
+          <option>Greater than or equal to</option>
+          <option>Less than or equal to</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputav">Asset Value</label>
+        <input type="text" class="form-control" [(ngModel)]="av" id="inputav" />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="validatedata()">
+      Search
+    </button>
+  </form>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"
+  ></script>
+</div>

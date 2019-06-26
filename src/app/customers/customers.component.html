@@ -1,0 +1,43 @@
+<div class="container-fluid" style="font-size:30px;">
+  <h2><u>Customer List</u></h2>
+  <table>
+    <tr>
+      <th><u>Id</u></th>
+      <th><u>Name</u></th>
+      <th><u>Email</u></th>
+      <th><u>Credit-Card</u></th>
+      <th><u>Debit-Card</u></th>
+      <th><u>Asset</u></th>
+      <th><u>Loan-Required</u></th>
+      <th><u>Action</u></th>
+      <th></th>
+    </tr>
+
+    <tr *ngFor="let x of customers">
+      <td>{{ x.id }}</td>
+
+      <td>{{ x.name }}</td>
+
+      <td>{{ x.email }}</td>
+
+      <td>{{ x.credit_card }}</td>
+
+      <td>{{ x.debit_card }}</td>
+
+      <td>{{ x.asset }}</td>
+
+      <td>{{ x.loan_req }}</td>
+
+      <td>
+        <u><a (click)="navigatex(x.id)">Update|</a></u>
+
+        <u><a name="delete" (click)="navigate(x.id)">Delete</a></u>
+      </td>
+    </tr>
+  </table>
+
+  <br /><br />
+  <a [routerLink]="['/addCustomer']" style="float:left;">
+    Add Customer
+  </a>
+</div>
